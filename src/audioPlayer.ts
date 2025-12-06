@@ -75,6 +75,7 @@ export class AudioPlayer {
                         audio.volume = 0.3; // 设置音量，0.3是30%音量，可以根据喜好调
                     }
                     // 每次播放前把播放进度重置到0，确保能连续、快速地重复播放
+                    //youmei
                     audio.currentTime = 0;
                     // 播放它！如果失败（比如用户没交互），就静默失败
                     audio.play().catch(error => { /* 忽略播放错误 */ });
