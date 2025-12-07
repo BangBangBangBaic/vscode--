@@ -22,14 +22,15 @@ export class AudioPlayer {
         );
         // 给这个Webview面板设置HTML内容
         this.panel.webview.html = this.getWebviewContent();
-        // 立刻隐藏它，我们不需要用户看到这个面板
+            // 让面板在后台显示，不主动弹出到前台
+            this.panel.reveal(this.panel.viewColumn, true);
     }
 
     // 这是你唯一需要调用的方法：播放一个按键音
     public playKeySound() {
         if (!this.panel) {
             return;
-        }
+        }   
         // 向隐藏的Webview面板发送一个消息，告诉它：“播放声音！”
         this.panel.webview.postMessage({
             command: 'play',
@@ -83,7 +84,7 @@ export class AudioPlayer {
             </script>
         </head>
         <body>
-            <p>华丽的调试页面</p>
+            <p>不要删除</p>
         </body>
         </html>
         `;

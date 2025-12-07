@@ -9,13 +9,16 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [ "onStartupFinished"],
+  "activationEvents": [
+    "*",
+    "onCommand:vscode-keyboard-sounds.start"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vscode-keyboard-sounds.helloWorld",
-        "title": "Hello World"
+        "command": "vscode-keyboard-sounds.start",
+        "title": "启动键盘音效"
       }
     ]
   },

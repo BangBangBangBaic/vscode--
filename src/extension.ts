@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
             }
         });
     });
-
+    
     // 将监听器加入订阅列表，这样插件关闭时会自动清理它
     context.subscriptions.push(disposable);
 }
